@@ -40,18 +40,21 @@ class MyHomePage extends StatelessWidget {
     var pair = appState.current;  
 
     return Scaffold(
-      body: Column(
-        children: [
-          Text('Rebeccas first foray into flutter.'),
-          BigCard(pair: pair),
-          ElevatedButton(
-            onPressed: () {
-              appState.getNext();
-              print('button pressed!');
-            },
-            child: Text('Next'),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Rebeccas first foray into flutter.'),
+            BigCard(pair: pair),
+            ElevatedButton(
+              onPressed: () {
+                appState.getNext();
+                print('button pressed!');
+              },
+              child: Text('Next'),
+            ),
+          ],
+        ),
       ),
     );
   }
